@@ -1,0 +1,17 @@
+{
+    "name": "ryzen/kismet_cinema_oop-master",
+    "autoload": {
+        "psr-4": {
+            "Ryzen\\KismetCinemaOopMaster\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Clavory",
+            "email": "allapitan.nathaniel@auf.edu.ph"
+        }
+    ],
+    "require": {
+        "mustache/mustache": "^2.14"
+    }
+}
