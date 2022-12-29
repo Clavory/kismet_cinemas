@@ -13,7 +13,7 @@
     <link rel="stylesheet" type="text/css" href="js/vendor/codemirror/lib/codemirror.css?v=5.1.3">
     <link rel="stylesheet" type="text/css" href="js/vendor/codemirror/addon/hint/show-hint.css?v=5.1.3">
     <link rel="stylesheet" type="text/css" href="js/vendor/codemirror/addon/lint/lint.css?v=5.1.3">
-    <link rel="stylesheet" type="text/css" href="./themes/pmahomme/css/theme.css?v=5.1.3&nocache=4048202984ltr&server=1">
+    <link rel="stylesheet" type="text/css" href="./themes/pmahomme/css/theme.css?v=5.1.3&nocache=1406552367ltr&server=1">
     <link rel="stylesheet" type="text/css" href="./themes/pmahomme/css/printview.css?v=5.1.3" media="print" id="printcss">
     <title>localhost / 127.0.0.1 | phpMyAdmin 5.1.3</title>
     <script data-cfasync="false" type="text/javascript" src="js/vendor/jquery/jquery.min.js?v=5.1.3"></script>
@@ -260,7 +260,7 @@ $(function() {
       </div>
       <div id="pma_navigation_tree" class="list_container synced highlight autoexpand">
 
-  <div class="pma_quick_warp"><div class="drop_list"><button title="Recent tables" class="drop_button btn">Recent</button><ul id="pma_recent_list"><li class="warp_link"><a href="index.php?route=/table/recent-favorite&db=kismet_cinemas&table=theater">`kismet_cinemas`.`theater`</a></li><li class="warp_link"><a href="index.php?route=/table/recent-favorite&db=kismet_cinemas&table=theater_settings">`kismet_cinemas`.`theater_settings`</a></li><li class="warp_link"><a href="index.php?route=/table/recent-favorite&db=other_db_kismet&table=users">`other_db_kismet`.`users`</a></li><li class="warp_link"><a href="index.php?route=/table/recent-favorite&db=other_db_kismet&table=trailers">`other_db_kismet`.`trailers`</a></li><li class="warp_link"><a href="index.php?route=/table/recent-favorite&db=other_db_kismet&table=cinemas">`other_db_kismet`.`cinemas`</a></li><li class="warp_link"><a href="index.php?route=/table/recent-favorite&db=other_db_kismet&table=movie_cinemas">`other_db_kismet`.`movie_cinemas`</a></li><li class="warp_link"><a href="index.php?route=/table/recent-favorite&db=other_db_kismet&table=movie_categories">`other_db_kismet`.`movie_categories`</a></li><li class="warp_link"><a href="index.php?route=/table/recent-favorite&db=kismet_cinemas&table=movies">`kismet_cinemas`.`movies`</a></li><li class="warp_link"><a href="index.php?route=/table/recent-favorite&db=other_db_kismet&table=movies">`other_db_kismet`.`movies`</a></li><li class="warp_link"><a href="index.php?route=/table/recent-favorite&db=other_db_kismet&table=categories">`other_db_kismet`.`categories`</a></li></ul></div><div class="drop_list"><button title="Favorite tables" class="drop_button btn">Favorites</button><ul id="pma_favorite_list"><li class="warp_link">There are no favorite tables.</li></ul></div><div class="clearfloat"></div></div>
+  <div class="pma_quick_warp"><div class="drop_list"><button title="Recent tables" class="drop_button btn">Recent</button><ul id="pma_recent_list"><li class="warp_link"><a href="index.php?route=/table/recent-favorite&db=kismet_cinemas&table=tblmovie">`kismet_cinemas`.`tblmovie`</a></li><li class="warp_link"><a href="index.php?route=/table/recent-favorite&db=kismet_cinemas&table=tblmovie_inv">`kismet_cinemas`.`tblmovie_inv`</a></li><li class="warp_link"><a href="index.php?route=/table/recent-favorite&db=kismet_cinemas&table=tblcustomer">`kismet_cinemas`.`tblcustomer`</a></li><li class="warp_link"><a href="index.php?route=/table/recent-favorite&db=kismet_cinemas&table=tblbooking">`kismet_cinemas`.`tblbooking`</a></li><li class="warp_link"><a href="index.php?route=/table/recent-favorite&db=kismet_cinemas&table=tblpayment">`kismet_cinemas`.`tblpayment`</a></li><li class="warp_link"><a href="index.php?route=/table/recent-favorite&db=kismet_cinemas&table=tbladmin">`kismet_cinemas`.`tbladmin`</a></li><li class="warp_link"><a href="index.php?route=/table/recent-favorite&db=kismet_cinemas&table=tblinventory_movie">`kismet_cinemas`.`tblinventory_movie`</a></li><li class="warp_link"><a href="index.php?route=/table/recent-favorite&db=kismet_cinemas&table=tblmovieshow">`kismet_cinemas`.`tblmovieshow`</a></li><li class="warp_link"><a href="index.php?route=/table/recent-favorite&db=kismet_cinemas&table=tblbookingticket">`kismet_cinemas`.`tblbookingticket`</a></li><li class="warp_link"><a href="index.php?route=/table/recent-favorite&db=sample-inno&table=ces_faculties">`sample-inno`.`ces_faculties`</a></li></ul></div><div class="drop_list"><button title="Favorite tables" class="drop_button btn">Favorites</button><ul id="pma_favorite_list"><li class="warp_link">There are no favorite tables.</li></ul></div><div class="clearfloat"></div></div>
 
 <div class="clearfloat"></div>
 
@@ -562,7 +562,7 @@ $.extend(defaultValues, {
                         Press Enter to execute query                    </span>
                 </div>
                                                             <div class="message history collapsed hide select"
-                            targetdb="kismet_cinemas" targettable="users">
+                            targetdb="kismet_cinemas" targettable="tblmovie">
                             <div class="action_content">
                     <span class="action collapse">
             Collapse
@@ -597,10 +597,10 @@ $.extend(defaultValues, {
                             : <span>During current session</span>
                     </span>
             </div>
-                            <span class="query">SELECT * FROM `users`</span>
+                            <span class="query">SELECT * FROM `tblmovie`</span>
                         </div>
                                             <div class="message history collapsed hide select"
-                            targetdb="kismet_cinemas" targettable="theater_settings">
+                            targetdb="kismet_cinemas" targettable="tblpayment">
                             <div class="action_content">
                     <span class="action collapse">
             Collapse
@@ -635,10 +635,10 @@ $.extend(defaultValues, {
                             : <span>During current session</span>
                     </span>
             </div>
-                            <span class="query">SELECT * FROM `theater_settings`</span>
+                            <span class="query">SELECT * FROM `tblpayment`</span>
                         </div>
-                                            <div class="message history collapsed hide select"
-                            targetdb="kismet_cinemas" targettable="theater">
+                                            <div class="message history collapsed hide"
+                            targetdb="kismet_cinemas" targettable="tblpayment">
                             <div class="action_content">
                     <span class="action collapse">
             Collapse
@@ -673,10 +673,10 @@ $.extend(defaultValues, {
                             : <span>During current session</span>
                     </span>
             </div>
-                            <span class="query">SELECT * FROM `theater`</span>
+                            <span class="query">ALTER TABLE `tblpayment`  ADD `customer_id` INT NOT NULL AUTO_INCREMENT  AFTER `booking_id`,  ADD   UNIQUE  `payment_customer` (`customer_id`);</span>
                         </div>
                                             <div class="message history collapsed hide select"
-                            targetdb="kismet_cinemas" targettable="theater">
+                            targetdb="kismet_cinemas" targettable="tblcustomer">
                             <div class="action_content">
                     <span class="action collapse">
             Collapse
@@ -711,10 +711,10 @@ $.extend(defaultValues, {
                             : <span>During current session</span>
                     </span>
             </div>
-                            <span class="query">SELECT * FROM `theater`</span>
+                            <span class="query">SELECT * FROM `tblcustomer`</span>
                         </div>
                                             <div class="message history collapsed hide select"
-                            targetdb="kismet_cinemas" targettable="theater_settings">
+                            targetdb="kismet_cinemas" targettable="tblpayment">
                             <div class="action_content">
                     <span class="action collapse">
             Collapse
@@ -749,10 +749,10 @@ $.extend(defaultValues, {
                             : <span>During current session</span>
                     </span>
             </div>
-                            <span class="query">SELECT * FROM `theater_settings`</span>
+                            <span class="query">SELECT * FROM `tblpayment`</span>
                         </div>
                                             <div class="message history collapsed hide select"
-                            targetdb="kismet_cinemas" targettable="theater">
+                            targetdb="kismet_cinemas" targettable="tblpayment">
                             <div class="action_content">
                     <span class="action collapse">
             Collapse
@@ -787,48 +787,10 @@ $.extend(defaultValues, {
                             : <span>During current session</span>
                     </span>
             </div>
-                            <span class="query">SELECT * FROM `theater`</span>
+                            <span class="query">SELECT * FROM `tblpayment`</span>
                         </div>
                                             <div class="message history collapsed hide select"
-                            targetdb="test_kismet" targettable="theater_settings">
-                            <div class="action_content">
-                    <span class="action collapse">
-            Collapse
-                    </span>
-                            <span class="action expand">
-            Expand
-                    </span>
-                            <span class="action requery">
-            Requery
-                    </span>
-                            <span class="action edit">
-            Edit
-                    </span>
-                            <span class="action explain">
-            Explain
-                    </span>
-                            <span class="action profiling">
-            Profiling
-                    </span>
-                            <span class="action bookmark">
-            Bookmark
-                    </span>
-                            <span class="text failed">
-            Query failed
-                    </span>
-                            <span class="text targetdb">
-            Database
-                            : <span>test_kismet</span>
-                    </span>
-                            <span class="text query_time">
-            Queried time
-                            : <span>During current session</span>
-                    </span>
-            </div>
-                            <span class="query">SELECT * FROM `theater_settings`</span>
-                        </div>
-                                            <div class="message history collapsed hide select"
-                            targetdb="kismet_cinemas" targettable="theater_settings">
+                            targetdb="kismet_cinemas" targettable="tblcustomer">
                             <div class="action_content">
                     <span class="action collapse">
             Collapse
@@ -863,352 +825,10 @@ $.extend(defaultValues, {
                             : <span>During current session</span>
                     </span>
             </div>
-                            <span class="query">SELECT * FROM `theater_settings`</span>
+                            <span class="query">SELECT * FROM `tblcustomer`</span>
                         </div>
                                             <div class="message history collapsed hide select"
-                            targetdb="other_db_kismet" targettable="movie_cast">
-                            <div class="action_content">
-                    <span class="action collapse">
-            Collapse
-                    </span>
-                            <span class="action expand">
-            Expand
-                    </span>
-                            <span class="action requery">
-            Requery
-                    </span>
-                            <span class="action edit">
-            Edit
-                    </span>
-                            <span class="action explain">
-            Explain
-                    </span>
-                            <span class="action profiling">
-            Profiling
-                    </span>
-                            <span class="action bookmark">
-            Bookmark
-                    </span>
-                            <span class="text failed">
-            Query failed
-                    </span>
-                            <span class="text targetdb">
-            Database
-                            : <span>other_db_kismet</span>
-                    </span>
-                            <span class="text query_time">
-            Queried time
-                            : <span>During current session</span>
-                    </span>
-            </div>
-                            <span class="query">SELECT * FROM `movie_cast`</span>
-                        </div>
-                                            <div class="message history collapsed hide select"
-                            targetdb="other_db_kismet" targettable="movie_cast">
-                            <div class="action_content">
-                    <span class="action collapse">
-            Collapse
-                    </span>
-                            <span class="action expand">
-            Expand
-                    </span>
-                            <span class="action requery">
-            Requery
-                    </span>
-                            <span class="action edit">
-            Edit
-                    </span>
-                            <span class="action explain">
-            Explain
-                    </span>
-                            <span class="action profiling">
-            Profiling
-                    </span>
-                            <span class="action bookmark">
-            Bookmark
-                    </span>
-                            <span class="text failed">
-            Query failed
-                    </span>
-                            <span class="text targetdb">
-            Database
-                            : <span>other_db_kismet</span>
-                    </span>
-                            <span class="text query_time">
-            Queried time
-                            : <span>During current session</span>
-                    </span>
-            </div>
-                            <span class="query">SELECT * FROM `movie_cast`</span>
-                        </div>
-                                            <div class="message history collapsed hide select"
-                            targetdb="other_db_kismet" targettable="celebrities">
-                            <div class="action_content">
-                    <span class="action collapse">
-            Collapse
-                    </span>
-                            <span class="action expand">
-            Expand
-                    </span>
-                            <span class="action requery">
-            Requery
-                    </span>
-                            <span class="action edit">
-            Edit
-                    </span>
-                            <span class="action explain">
-            Explain
-                    </span>
-                            <span class="action profiling">
-            Profiling
-                    </span>
-                            <span class="action bookmark">
-            Bookmark
-                    </span>
-                            <span class="text failed">
-            Query failed
-                    </span>
-                            <span class="text targetdb">
-            Database
-                            : <span>other_db_kismet</span>
-                    </span>
-                            <span class="text query_time">
-            Queried time
-                            : <span>During current session</span>
-                    </span>
-            </div>
-                            <span class="query">SELECT * FROM `celebrities`</span>
-                        </div>
-                                            <div class="message history collapsed hide select"
-                            targetdb="other_db_kismet" targettable="admins">
-                            <div class="action_content">
-                    <span class="action collapse">
-            Collapse
-                    </span>
-                            <span class="action expand">
-            Expand
-                    </span>
-                            <span class="action requery">
-            Requery
-                    </span>
-                            <span class="action edit">
-            Edit
-                    </span>
-                            <span class="action explain">
-            Explain
-                    </span>
-                            <span class="action profiling">
-            Profiling
-                    </span>
-                            <span class="action bookmark">
-            Bookmark
-                    </span>
-                            <span class="text failed">
-            Query failed
-                    </span>
-                            <span class="text targetdb">
-            Database
-                            : <span>other_db_kismet</span>
-                    </span>
-                            <span class="text query_time">
-            Queried time
-                            : <span>During current session</span>
-                    </span>
-            </div>
-                            <span class="query">SELECT * FROM `admins`</span>
-                        </div>
-                                            <div class="message history collapsed hide select"
-                            targetdb="other_db_kismet" targettable="categories">
-                            <div class="action_content">
-                    <span class="action collapse">
-            Collapse
-                    </span>
-                            <span class="action expand">
-            Expand
-                    </span>
-                            <span class="action requery">
-            Requery
-                    </span>
-                            <span class="action edit">
-            Edit
-                    </span>
-                            <span class="action explain">
-            Explain
-                    </span>
-                            <span class="action profiling">
-            Profiling
-                    </span>
-                            <span class="action bookmark">
-            Bookmark
-                    </span>
-                            <span class="text failed">
-            Query failed
-                    </span>
-                            <span class="text targetdb">
-            Database
-                            : <span>other_db_kismet</span>
-                    </span>
-                            <span class="text query_time">
-            Queried time
-                            : <span>During current session</span>
-                    </span>
-            </div>
-                            <span class="query">SELECT * FROM `categories`</span>
-                        </div>
-                                            <div class="message history collapsed hide select"
-                            targetdb="other_db_kismet" targettable="cinemas">
-                            <div class="action_content">
-                    <span class="action collapse">
-            Collapse
-                    </span>
-                            <span class="action expand">
-            Expand
-                    </span>
-                            <span class="action requery">
-            Requery
-                    </span>
-                            <span class="action edit">
-            Edit
-                    </span>
-                            <span class="action explain">
-            Explain
-                    </span>
-                            <span class="action profiling">
-            Profiling
-                    </span>
-                            <span class="action bookmark">
-            Bookmark
-                    </span>
-                            <span class="text failed">
-            Query failed
-                    </span>
-                            <span class="text targetdb">
-            Database
-                            : <span>other_db_kismet</span>
-                    </span>
-                            <span class="text query_time">
-            Queried time
-                            : <span>During current session</span>
-                    </span>
-            </div>
-                            <span class="query">SELECT * FROM `cinemas`</span>
-                        </div>
-                                            <div class="message history collapsed hide select"
-                            targetdb="other_db_kismet" targettable="movies">
-                            <div class="action_content">
-                    <span class="action collapse">
-            Collapse
-                    </span>
-                            <span class="action expand">
-            Expand
-                    </span>
-                            <span class="action requery">
-            Requery
-                    </span>
-                            <span class="action edit">
-            Edit
-                    </span>
-                            <span class="action explain">
-            Explain
-                    </span>
-                            <span class="action profiling">
-            Profiling
-                    </span>
-                            <span class="action bookmark">
-            Bookmark
-                    </span>
-                            <span class="text failed">
-            Query failed
-                    </span>
-                            <span class="text targetdb">
-            Database
-                            : <span>other_db_kismet</span>
-                    </span>
-                            <span class="text query_time">
-            Queried time
-                            : <span>During current session</span>
-                    </span>
-            </div>
-                            <span class="query">SELECT * FROM `movies`</span>
-                        </div>
-                                            <div class="message history collapsed hide select"
-                            targetdb="other_db_kismet" targettable="movies">
-                            <div class="action_content">
-                    <span class="action collapse">
-            Collapse
-                    </span>
-                            <span class="action expand">
-            Expand
-                    </span>
-                            <span class="action requery">
-            Requery
-                    </span>
-                            <span class="action edit">
-            Edit
-                    </span>
-                            <span class="action explain">
-            Explain
-                    </span>
-                            <span class="action profiling">
-            Profiling
-                    </span>
-                            <span class="action bookmark">
-            Bookmark
-                    </span>
-                            <span class="text failed">
-            Query failed
-                    </span>
-                            <span class="text targetdb">
-            Database
-                            : <span>other_db_kismet</span>
-                    </span>
-                            <span class="text query_time">
-            Queried time
-                            : <span>During current session</span>
-                    </span>
-            </div>
-                            <span class="query">SELECT * FROM `movies`</span>
-                        </div>
-                                            <div class="message history collapsed hide select"
-                            targetdb="other_db_kismet" targettable="movies">
-                            <div class="action_content">
-                    <span class="action collapse">
-            Collapse
-                    </span>
-                            <span class="action expand">
-            Expand
-                    </span>
-                            <span class="action requery">
-            Requery
-                    </span>
-                            <span class="action edit">
-            Edit
-                    </span>
-                            <span class="action explain">
-            Explain
-                    </span>
-                            <span class="action profiling">
-            Profiling
-                    </span>
-                            <span class="action bookmark">
-            Bookmark
-                    </span>
-                            <span class="text failed">
-            Query failed
-                    </span>
-                            <span class="text targetdb">
-            Database
-                            : <span>other_db_kismet</span>
-                    </span>
-                            <span class="text query_time">
-            Queried time
-                            : <span>During current session</span>
-                    </span>
-            </div>
-                            <span class="query">SELECT * FROM `movies`</span>
-                        </div>
-                                            <div class="message history collapsed hide select"
-                            targetdb="kismet_cinemas" targettable="movies">
+                            targetdb="kismet_cinemas" targettable="tblbooking">
                             <div class="action_content">
                     <span class="action collapse">
             Collapse
@@ -1243,200 +863,10 @@ $.extend(defaultValues, {
                             : <span>During current session</span>
                     </span>
             </div>
-                            <span class="query">SELECT * FROM `movies`</span>
+                            <span class="query">SELECT * FROM `tblbooking`</span>
                         </div>
                                             <div class="message history collapsed hide select"
-                            targetdb="other_db_kismet" targettable="movie_categories">
-                            <div class="action_content">
-                    <span class="action collapse">
-            Collapse
-                    </span>
-                            <span class="action expand">
-            Expand
-                    </span>
-                            <span class="action requery">
-            Requery
-                    </span>
-                            <span class="action edit">
-            Edit
-                    </span>
-                            <span class="action explain">
-            Explain
-                    </span>
-                            <span class="action profiling">
-            Profiling
-                    </span>
-                            <span class="action bookmark">
-            Bookmark
-                    </span>
-                            <span class="text failed">
-            Query failed
-                    </span>
-                            <span class="text targetdb">
-            Database
-                            : <span>other_db_kismet</span>
-                    </span>
-                            <span class="text query_time">
-            Queried time
-                            : <span>During current session</span>
-                    </span>
-            </div>
-                            <span class="query">SELECT * FROM `movie_categories`</span>
-                        </div>
-                                            <div class="message history collapsed hide select"
-                            targetdb="other_db_kismet" targettable="movie_cinemas">
-                            <div class="action_content">
-                    <span class="action collapse">
-            Collapse
-                    </span>
-                            <span class="action expand">
-            Expand
-                    </span>
-                            <span class="action requery">
-            Requery
-                    </span>
-                            <span class="action edit">
-            Edit
-                    </span>
-                            <span class="action explain">
-            Explain
-                    </span>
-                            <span class="action profiling">
-            Profiling
-                    </span>
-                            <span class="action bookmark">
-            Bookmark
-                    </span>
-                            <span class="text failed">
-            Query failed
-                    </span>
-                            <span class="text targetdb">
-            Database
-                            : <span>other_db_kismet</span>
-                    </span>
-                            <span class="text query_time">
-            Queried time
-                            : <span>During current session</span>
-                    </span>
-            </div>
-                            <span class="query">SELECT * FROM `movie_cinemas`</span>
-                        </div>
-                                            <div class="message history collapsed hide select"
-                            targetdb="other_db_kismet" targettable="cinemas">
-                            <div class="action_content">
-                    <span class="action collapse">
-            Collapse
-                    </span>
-                            <span class="action expand">
-            Expand
-                    </span>
-                            <span class="action requery">
-            Requery
-                    </span>
-                            <span class="action edit">
-            Edit
-                    </span>
-                            <span class="action explain">
-            Explain
-                    </span>
-                            <span class="action profiling">
-            Profiling
-                    </span>
-                            <span class="action bookmark">
-            Bookmark
-                    </span>
-                            <span class="text failed">
-            Query failed
-                    </span>
-                            <span class="text targetdb">
-            Database
-                            : <span>other_db_kismet</span>
-                    </span>
-                            <span class="text query_time">
-            Queried time
-                            : <span>During current session</span>
-                    </span>
-            </div>
-                            <span class="query">SELECT * FROM `cinemas`</span>
-                        </div>
-                                            <div class="message history collapsed hide select"
-                            targetdb="other_db_kismet" targettable="trailers">
-                            <div class="action_content">
-                    <span class="action collapse">
-            Collapse
-                    </span>
-                            <span class="action expand">
-            Expand
-                    </span>
-                            <span class="action requery">
-            Requery
-                    </span>
-                            <span class="action edit">
-            Edit
-                    </span>
-                            <span class="action explain">
-            Explain
-                    </span>
-                            <span class="action profiling">
-            Profiling
-                    </span>
-                            <span class="action bookmark">
-            Bookmark
-                    </span>
-                            <span class="text failed">
-            Query failed
-                    </span>
-                            <span class="text targetdb">
-            Database
-                            : <span>other_db_kismet</span>
-                    </span>
-                            <span class="text query_time">
-            Queried time
-                            : <span>During current session</span>
-                    </span>
-            </div>
-                            <span class="query">SELECT * FROM `trailers`</span>
-                        </div>
-                                            <div class="message history collapsed hide select"
-                            targetdb="other_db_kismet" targettable="users">
-                            <div class="action_content">
-                    <span class="action collapse">
-            Collapse
-                    </span>
-                            <span class="action expand">
-            Expand
-                    </span>
-                            <span class="action requery">
-            Requery
-                    </span>
-                            <span class="action edit">
-            Edit
-                    </span>
-                            <span class="action explain">
-            Explain
-                    </span>
-                            <span class="action profiling">
-            Profiling
-                    </span>
-                            <span class="action bookmark">
-            Bookmark
-                    </span>
-                            <span class="text failed">
-            Query failed
-                    </span>
-                            <span class="text targetdb">
-            Database
-                            : <span>other_db_kismet</span>
-                    </span>
-                            <span class="text query_time">
-            Queried time
-                            : <span>During current session</span>
-                    </span>
-            </div>
-                            <span class="query">SELECT * FROM `users`</span>
-                        </div>
-                                            <div class="message history collapsed hide select"
-                            targetdb="kismet_cinemas" targettable="theater_settings">
+                            targetdb="kismet_cinemas" targettable="tblpayment">
                             <div class="action_content">
                     <span class="action collapse">
             Collapse
@@ -1471,10 +901,10 @@ $.extend(defaultValues, {
                             : <span>During current session</span>
                     </span>
             </div>
-                            <span class="query">SELECT * FROM `theater_settings`</span>
+                            <span class="query">SELECT * FROM `tblpayment`</span>
                         </div>
                                             <div class="message history collapsed hide select"
-                            targetdb="kismet_cinemas" targettable="theater">
+                            targetdb="kismet_cinemas" targettable="tblmovie_inv">
                             <div class="action_content">
                     <span class="action collapse">
             Collapse
@@ -1509,7 +939,577 @@ $.extend(defaultValues, {
                             : <span>During current session</span>
                     </span>
             </div>
-                            <span class="query">SELECT * FROM `theater`</span>
+                            <span class="query">SELECT * FROM `tblmovie_inv`</span>
+                        </div>
+                                            <div class="message history collapsed hide select"
+                            targetdb="kismet_cinemas" targettable="tblpayment">
+                            <div class="action_content">
+                    <span class="action collapse">
+            Collapse
+                    </span>
+                            <span class="action expand">
+            Expand
+                    </span>
+                            <span class="action requery">
+            Requery
+                    </span>
+                            <span class="action edit">
+            Edit
+                    </span>
+                            <span class="action explain">
+            Explain
+                    </span>
+                            <span class="action profiling">
+            Profiling
+                    </span>
+                            <span class="action bookmark">
+            Bookmark
+                    </span>
+                            <span class="text failed">
+            Query failed
+                    </span>
+                            <span class="text targetdb">
+            Database
+                            : <span>kismet_cinemas</span>
+                    </span>
+                            <span class="text query_time">
+            Queried time
+                            : <span>During current session</span>
+                    </span>
+            </div>
+                            <span class="query">SELECT * FROM `tblpayment`</span>
+                        </div>
+                                            <div class="message history collapsed hide select"
+                            targetdb="kismet_cinemas" targettable="tblcustomer">
+                            <div class="action_content">
+                    <span class="action collapse">
+            Collapse
+                    </span>
+                            <span class="action expand">
+            Expand
+                    </span>
+                            <span class="action requery">
+            Requery
+                    </span>
+                            <span class="action edit">
+            Edit
+                    </span>
+                            <span class="action explain">
+            Explain
+                    </span>
+                            <span class="action profiling">
+            Profiling
+                    </span>
+                            <span class="action bookmark">
+            Bookmark
+                    </span>
+                            <span class="text failed">
+            Query failed
+                    </span>
+                            <span class="text targetdb">
+            Database
+                            : <span>kismet_cinemas</span>
+                    </span>
+                            <span class="text query_time">
+            Queried time
+                            : <span>During current session</span>
+                    </span>
+            </div>
+                            <span class="query">SELECT * FROM `tblcustomer`</span>
+                        </div>
+                                            <div class="message history collapsed hide select"
+                            targetdb="kismet_cinemas" targettable="tblcustomer">
+                            <div class="action_content">
+                    <span class="action collapse">
+            Collapse
+                    </span>
+                            <span class="action expand">
+            Expand
+                    </span>
+                            <span class="action requery">
+            Requery
+                    </span>
+                            <span class="action edit">
+            Edit
+                    </span>
+                            <span class="action explain">
+            Explain
+                    </span>
+                            <span class="action profiling">
+            Profiling
+                    </span>
+                            <span class="action bookmark">
+            Bookmark
+                    </span>
+                            <span class="text failed">
+            Query failed
+                    </span>
+                            <span class="text targetdb">
+            Database
+                            : <span>kismet_cinemas</span>
+                    </span>
+                            <span class="text query_time">
+            Queried time
+                            : <span>During current session</span>
+                    </span>
+            </div>
+                            <span class="query">SELECT * FROM `tblcustomer`</span>
+                        </div>
+                                            <div class="message history collapsed hide select"
+                            targetdb="kismet_cinemas" targettable="tblpayment">
+                            <div class="action_content">
+                    <span class="action collapse">
+            Collapse
+                    </span>
+                            <span class="action expand">
+            Expand
+                    </span>
+                            <span class="action requery">
+            Requery
+                    </span>
+                            <span class="action edit">
+            Edit
+                    </span>
+                            <span class="action explain">
+            Explain
+                    </span>
+                            <span class="action profiling">
+            Profiling
+                    </span>
+                            <span class="action bookmark">
+            Bookmark
+                    </span>
+                            <span class="text failed">
+            Query failed
+                    </span>
+                            <span class="text targetdb">
+            Database
+                            : <span>kismet_cinemas</span>
+                    </span>
+                            <span class="text query_time">
+            Queried time
+                            : <span>During current session</span>
+                    </span>
+            </div>
+                            <span class="query">SELECT * FROM `tblpayment`</span>
+                        </div>
+                                            <div class="message history collapsed hide"
+                            targetdb="kismet_cinemas" targettable="tblpayment">
+                            <div class="action_content">
+                    <span class="action collapse">
+            Collapse
+                    </span>
+                            <span class="action expand">
+            Expand
+                    </span>
+                            <span class="action requery">
+            Requery
+                    </span>
+                            <span class="action edit">
+            Edit
+                    </span>
+                            <span class="action explain">
+            Explain
+                    </span>
+                            <span class="action profiling">
+            Profiling
+                    </span>
+                            <span class="action bookmark">
+            Bookmark
+                    </span>
+                            <span class="text failed">
+            Query failed
+                    </span>
+                            <span class="text targetdb">
+            Database
+                            : <span>kismet_cinemas</span>
+                    </span>
+                            <span class="text query_time">
+            Queried time
+                            : <span>During current session</span>
+                    </span>
+            </div>
+                            <span class="query">ALTER TABLE `tblpayment` DROP `customer_id`;</span>
+                        </div>
+                                            <div class="message history collapsed hide select"
+                            targetdb="kismet_cinemas" targettable="tblpayment">
+                            <div class="action_content">
+                    <span class="action collapse">
+            Collapse
+                    </span>
+                            <span class="action expand">
+            Expand
+                    </span>
+                            <span class="action requery">
+            Requery
+                    </span>
+                            <span class="action edit">
+            Edit
+                    </span>
+                            <span class="action explain">
+            Explain
+                    </span>
+                            <span class="action profiling">
+            Profiling
+                    </span>
+                            <span class="action bookmark">
+            Bookmark
+                    </span>
+                            <span class="text failed">
+            Query failed
+                    </span>
+                            <span class="text targetdb">
+            Database
+                            : <span>kismet_cinemas</span>
+                    </span>
+                            <span class="text query_time">
+            Queried time
+                            : <span>During current session</span>
+                    </span>
+            </div>
+                            <span class="query">SELECT * FROM `tblpayment`</span>
+                        </div>
+                                            <div class="message history collapsed hide select"
+                            targetdb="kismet_cinemas" targettable="tblmovie_inv">
+                            <div class="action_content">
+                    <span class="action collapse">
+            Collapse
+                    </span>
+                            <span class="action expand">
+            Expand
+                    </span>
+                            <span class="action requery">
+            Requery
+                    </span>
+                            <span class="action edit">
+            Edit
+                    </span>
+                            <span class="action explain">
+            Explain
+                    </span>
+                            <span class="action profiling">
+            Profiling
+                    </span>
+                            <span class="action bookmark">
+            Bookmark
+                    </span>
+                            <span class="text failed">
+            Query failed
+                    </span>
+                            <span class="text targetdb">
+            Database
+                            : <span>kismet_cinemas</span>
+                    </span>
+                            <span class="text query_time">
+            Queried time
+                            : <span>During current session</span>
+                    </span>
+            </div>
+                            <span class="query">SELECT * FROM `tblmovie_inv`</span>
+                        </div>
+                                            <div class="message history collapsed hide select"
+                            targetdb="kismet_cinemas" targettable="tblcustomer">
+                            <div class="action_content">
+                    <span class="action collapse">
+            Collapse
+                    </span>
+                            <span class="action expand">
+            Expand
+                    </span>
+                            <span class="action requery">
+            Requery
+                    </span>
+                            <span class="action edit">
+            Edit
+                    </span>
+                            <span class="action explain">
+            Explain
+                    </span>
+                            <span class="action profiling">
+            Profiling
+                    </span>
+                            <span class="action bookmark">
+            Bookmark
+                    </span>
+                            <span class="text failed">
+            Query failed
+                    </span>
+                            <span class="text targetdb">
+            Database
+                            : <span>kismet_cinemas</span>
+                    </span>
+                            <span class="text query_time">
+            Queried time
+                            : <span>During current session</span>
+                    </span>
+            </div>
+                            <span class="query">SELECT * FROM `tblcustomer`</span>
+                        </div>
+                                            <div class="message history collapsed hide select"
+                            targetdb="kismet_cinemas" targettable="tblbooking">
+                            <div class="action_content">
+                    <span class="action collapse">
+            Collapse
+                    </span>
+                            <span class="action expand">
+            Expand
+                    </span>
+                            <span class="action requery">
+            Requery
+                    </span>
+                            <span class="action edit">
+            Edit
+                    </span>
+                            <span class="action explain">
+            Explain
+                    </span>
+                            <span class="action profiling">
+            Profiling
+                    </span>
+                            <span class="action bookmark">
+            Bookmark
+                    </span>
+                            <span class="text failed">
+            Query failed
+                    </span>
+                            <span class="text targetdb">
+            Database
+                            : <span>kismet_cinemas</span>
+                    </span>
+                            <span class="text query_time">
+            Queried time
+                            : <span>During current session</span>
+                    </span>
+            </div>
+                            <span class="query">SELECT * FROM `tblbooking`</span>
+                        </div>
+                                            <div class="message history collapsed hide select"
+                            targetdb="kismet_cinemas" targettable="tblcustomer">
+                            <div class="action_content">
+                    <span class="action collapse">
+            Collapse
+                    </span>
+                            <span class="action expand">
+            Expand
+                    </span>
+                            <span class="action requery">
+            Requery
+                    </span>
+                            <span class="action edit">
+            Edit
+                    </span>
+                            <span class="action explain">
+            Explain
+                    </span>
+                            <span class="action profiling">
+            Profiling
+                    </span>
+                            <span class="action bookmark">
+            Bookmark
+                    </span>
+                            <span class="text failed">
+            Query failed
+                    </span>
+                            <span class="text targetdb">
+            Database
+                            : <span>kismet_cinemas</span>
+                    </span>
+                            <span class="text query_time">
+            Queried time
+                            : <span>During current session</span>
+                    </span>
+            </div>
+                            <span class="query">SELECT * FROM `tblcustomer`</span>
+                        </div>
+                                            <div class="message history collapsed hide select"
+                            targetdb="kismet_cinemas" targettable="tblmovie">
+                            <div class="action_content">
+                    <span class="action collapse">
+            Collapse
+                    </span>
+                            <span class="action expand">
+            Expand
+                    </span>
+                            <span class="action requery">
+            Requery
+                    </span>
+                            <span class="action edit">
+            Edit
+                    </span>
+                            <span class="action explain">
+            Explain
+                    </span>
+                            <span class="action profiling">
+            Profiling
+                    </span>
+                            <span class="action bookmark">
+            Bookmark
+                    </span>
+                            <span class="text failed">
+            Query failed
+                    </span>
+                            <span class="text targetdb">
+            Database
+                            : <span>kismet_cinemas</span>
+                    </span>
+                            <span class="text query_time">
+            Queried time
+                            : <span>During current session</span>
+                    </span>
+            </div>
+                            <span class="query">SELECT * FROM `tblmovie`</span>
+                        </div>
+                                            <div class="message history collapsed hide select"
+                            targetdb="kismet_cinemas" targettable="tblmovie_inv">
+                            <div class="action_content">
+                    <span class="action collapse">
+            Collapse
+                    </span>
+                            <span class="action expand">
+            Expand
+                    </span>
+                            <span class="action requery">
+            Requery
+                    </span>
+                            <span class="action edit">
+            Edit
+                    </span>
+                            <span class="action explain">
+            Explain
+                    </span>
+                            <span class="action profiling">
+            Profiling
+                    </span>
+                            <span class="action bookmark">
+            Bookmark
+                    </span>
+                            <span class="text failed">
+            Query failed
+                    </span>
+                            <span class="text targetdb">
+            Database
+                            : <span>kismet_cinemas</span>
+                    </span>
+                            <span class="text query_time">
+            Queried time
+                            : <span>During current session</span>
+                    </span>
+            </div>
+                            <span class="query">SELECT * FROM `tblmovie_inv`</span>
+                        </div>
+                                            <div class="message history collapsed hide select"
+                            targetdb="kismet_cinemas" targettable="tblcustomer">
+                            <div class="action_content">
+                    <span class="action collapse">
+            Collapse
+                    </span>
+                            <span class="action expand">
+            Expand
+                    </span>
+                            <span class="action requery">
+            Requery
+                    </span>
+                            <span class="action edit">
+            Edit
+                    </span>
+                            <span class="action explain">
+            Explain
+                    </span>
+                            <span class="action profiling">
+            Profiling
+                    </span>
+                            <span class="action bookmark">
+            Bookmark
+                    </span>
+                            <span class="text failed">
+            Query failed
+                    </span>
+                            <span class="text targetdb">
+            Database
+                            : <span>kismet_cinemas</span>
+                    </span>
+                            <span class="text query_time">
+            Queried time
+                            : <span>During current session</span>
+                    </span>
+            </div>
+                            <span class="query">SELECT * FROM `tblcustomer`</span>
+                        </div>
+                                            <div class="message history collapsed hide select"
+                            targetdb="kismet_cinemas" targettable="tblmovie_inv">
+                            <div class="action_content">
+                    <span class="action collapse">
+            Collapse
+                    </span>
+                            <span class="action expand">
+            Expand
+                    </span>
+                            <span class="action requery">
+            Requery
+                    </span>
+                            <span class="action edit">
+            Edit
+                    </span>
+                            <span class="action explain">
+            Explain
+                    </span>
+                            <span class="action profiling">
+            Profiling
+                    </span>
+                            <span class="action bookmark">
+            Bookmark
+                    </span>
+                            <span class="text failed">
+            Query failed
+                    </span>
+                            <span class="text targetdb">
+            Database
+                            : <span>kismet_cinemas</span>
+                    </span>
+                            <span class="text query_time">
+            Queried time
+                            : <span>During current session</span>
+                    </span>
+            </div>
+                            <span class="query">SELECT * FROM `tblmovie_inv`</span>
+                        </div>
+                                            <div class="message history collapsed hide select"
+                            targetdb="kismet_cinemas" targettable="tblmovie">
+                            <div class="action_content">
+                    <span class="action collapse">
+            Collapse
+                    </span>
+                            <span class="action expand">
+            Expand
+                    </span>
+                            <span class="action requery">
+            Requery
+                    </span>
+                            <span class="action edit">
+            Edit
+                    </span>
+                            <span class="action explain">
+            Explain
+                    </span>
+                            <span class="action profiling">
+            Profiling
+                    </span>
+                            <span class="action bookmark">
+            Bookmark
+                    </span>
+                            <span class="text failed">
+            Query failed
+                    </span>
+                            <span class="text targetdb">
+            Database
+                            : <span>kismet_cinemas</span>
+                    </span>
+                            <span class="text query_time">
+            Queried time
+                            : <span>During current session</span>
+                    </span>
+            </div>
+                            <span class="query">SELECT * FROM `tblmovie`</span>
                         </div>
                                                 </div><!-- console_message_container -->
             <div class="query_input">

@@ -4,46 +4,44 @@ use \PDO;
 
 class Booking
 {
-    protected $booking_id;
-    protected $first_name;
-    protected $last_name;
-    protected $contact_number;
-	protected $qty;
-    protected $date_of_book; 
-    protected $time;      
+    protected $id;
+    protected $avail_tickets;
+    protected $seat_number;
+    protected $date;
+	protected $time;
+    protected $venue;       
 
-    public function __construct($first_name, $last_name='', $contact_number='', $qty, $date_of_book, $time)
+    public function __construct($no_of_tickets_available, $ticket_number, $date, $time, $venue)
 	{
-		$this->first_name= $first_name;
-		$this->last_name= $last_name;
-		$this->contact_number= $contact_number;
-		$this->qty= $qty;
-		$this->date_of_book= $date_of_book;
+		$this->avail_tickets= $avail_tickets;
+		$this->seat_number= $seat_number;
+		$this->date= $date;
 		$this->time= $time;
+		$this->venue= $venue;
 	}
 
-	public function getBookingId(){
-		return $this->booking_id;
+	public function getTicketId(){
+		return $this->id;
 	}
 
-	public function getFirstName(){
-		return $this->first_name;
+	public function getAvailableTicket(){
+		return $this->avail_tickets;
 	}
 
-	public function getLastName(){
-		return $this->last_name;
+	public function getTicketNumber(){
+		return $this->seat_number;
 	}
 
-	public function getContactNumber(){
-		return $this->contact_number;
+	public function getDate(){
+		return $this->date;
 	}
 
-	public function getDateOfBook(){
-		return $this->date_of_book;
+	public function getTime(){
+		return $this->time;
 	}
 
-	public function getQuantity(){
-		return $this->qty;
+	public function getVenue(){
+		return $this->venue;
 	}
 
     public function setConnection($connection)
@@ -51,22 +49,22 @@ class Booking
 		$this->connection = $connection;
 	}
 	
-	public function getByBookingId($booking_id){
+	public function getByTicketId($ticketid){
 		try {
-			$sql = 'SELECT * FROM booking WHERE booking_id=?';
+			$sql = 'SELECT * FROM tblbooking WHERE id=?';
 			$statement = $this->connection->prepare($sql);
 			$statement->execute([
-				$booking_id
+				$id
 			]);
 
 			$row = $statement->fetchAll();
 			foreach($row as $data){
-				$this->booking_id = $data['booking_id'];
-				$this->first_name = $data['first_name'];
-				$this->last_name = $data['last_name'];
-				$this->contact_number = $data['contact_number'];
-				$this->qty = $data['qty'];
-				$this->date_of_book = $data['date_of_book'];
+				$this->id = $data['id'];
+				$this->avail_tickets = $data['avail_tickets'];
+				$this->seat_number = $data['seat_number'];
+				$this->date = $data['date'];
+				$this->time = $data['time'];
+				$this->venue= $data['venue'];
 			}
 			return $row;
 		} catch (Exception $e) {
@@ -76,7 +74,7 @@ class Booking
 
 	public function getAllBooking(){
         try {
-			$sql = 'SELECT * FROM booking';
+			$sql = 'SELECT * FROM tblbooking';
 			$data = $this->connection->query($sql)->fetchAll();
 			return $data;
 		} catch (Exception $e) {
@@ -86,16 +84,15 @@ class Booking
   
 	public function addBooking(){
 		try {
-			$encrypted_password = sha1($this->getPassword());
-			$sql = "INSERT INTO booking SET booking_id=?, first_name=?, last_name=?, contact_number=?, qty=?, date_of_book=?"; 
+			$sql = "INSERT INTO tblbooking SET id=?, avail_tickets=?, seat_number=?, date=?, time=?, venue=?"; 
 			$statement = $this->connection->prepare($sql);
 			return $statement->execute([
-				$this->getBookingId(),
-				$this->getFirstName(),
-				$this->getLastName(),
-				$this->getContactNumber(),
-				$this->getQuantity(),
-				$this->getDateOfBook()
+				$this->getTicketId(),
+				$this->getAvailableTicket(),
+				$this->getTicketNumber(),
+				$this->getDate(),
+				$this->getTime(),
+				$this->getVenue()
 			]);
 
 		} catch (Exception $e) {
@@ -103,24 +100,24 @@ class Booking
 		}
 	}
 	
-	public function updateBooking($first_name, $last_name, $contact_number, $qty, $date_of_book)
+	public function updateBooking($avail_tickets, $seat_number, $date, $time, $venue)
 	{
 		try {
-			$sql = 'UPDATE booking SET first_name=?, last_name=?, contact_number=?, qty=?, date_of_book=? WHERE booking-id=?';
+			$sql = 'UPDATE tblbooking= SET avail_tickets=?, seat_number=?, date=?, time=?, venue=? WHERE id=?';
 			$statement = $this->connection->prepare($sql);
 			$statement->execute([
-				$first_name,
-				$last_name, 
-				$contact_number,
-				$qty,
-				$date_of_book,
-				$this->getBookingId()
+				$avail_tickets, 
+				$seat_number, 
+				$date, 
+				$time, 
+				$venue,
+				$this->getTicketId()
 			]);
-			$this->first_name = $first_name;
-			$this->last_name = $last_name;
-			$this->contact_number = $contact_number;
-			$this->qty = $qty;
-			$this->date_of_book = $date_of_book;	
+			$this->avail_tickets = $avail_tickets;
+			$this->ticket_number = $ticket_number;
+			$this->date = $date;
+			$this->time = $time;
+			$this->venue = $venue;	
 		} catch (Exception $e) {
 			error_log($e->getMessage());
 		}
@@ -129,41 +126,14 @@ class Booking
 	public function deleteBooking()
 	{
 		try {
-			$sql = 'UPDATE booking SET status=2 WHERE booking_id=?';
+			$sql = 'UPDATE tblbooking WHERE id=?';
 			$statement = $this->connection->prepare($sql);
 			$statement->execute([
-				$this->getBookingId()
+				$this->getTicketId()
 			]);
 		} catch (Exception $e) {
 			error_log($e->getMessage());
 		}
 	}
 
-	public function handleUpload($fileObject){
-		try {
-			$target_dir = '../../public/img/';
-
-			$file_type = $_FILES['image_path']['type'];
-			$allowed = array("image/jpeg", "image/gif", "image/png");
-			if(!in_array($file_type, $allowed)) {
-				$error_message = 'error';
-				return $error_message;
-			}
-			else{
-				if (is_uploaded_file($fileObject['tmp_name'])) {
-					$target_file_path = $target_dir . date("Y-m-dh-i-s") . $fileObject['name'] ;
-					$save_file_path = date("Y-m-dh-i-s") . $fileObject['name'] ;
-					if (move_uploaded_file($fileObject['tmp_name'], $target_file_path)) {
-						return [
-							'picture_path' => $target_file_path,
-							'save_path' => $save_file_path
-						];
-					}
-				}
-			}
-		} catch (Exception $e) {
-			error_log($e->getMessage());
-			return false;
-		}
-	}
 }

@@ -1,16 +1,16 @@
 <?php
 include ("../init.php");
 session_start();
-use Models\Faculty;
+use Models\Admin;
 
-if(!isset($_SESSION['faculty_number']) || $_SESSION['faculty_type'] != 1){
-    echo "<script>window.location.href='../faculty-login.php';</script>";
+if(!isset($_SESSION['admin_id'])){
+    echo "<script>window.location.href='../admin-login.php';</script>";
     exit();
 }
 
-$admin = new Faculty('', '', '', '', '', '', '', '', '', '3');
+$admin = new Admin('', '', '');
 $admin->setConnection($connection);
-$admin_user = $admin->setUser($_SESSION['faculty_number']);
+$admin_user = $admin->setUser($_SESSION['admin_id']);
 
 
 $template = $mustache->loadTemplate('admin/dashboard.mustache');
