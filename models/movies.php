@@ -2,7 +2,7 @@
 namespace Models;
 use \PDO;
 
-class Movie
+class Movies
 {
     protected $id;
     protected $movie_name;   
@@ -90,8 +90,9 @@ class Movie
 			return $statement->execute([
 				$this->getMovieId(),
 				$this->getMovieName(),
-				$this->getMovieHour(),
-				$this->getMovieType(),
+				$this->getMovieDuration(),
+				$this->getMoviePrice(),
+				$this->getMovieGenre(),
 				$this->getMovieDate()
 			]);
 
@@ -126,7 +127,7 @@ class Movie
 
 	public function deleteMovie(){
 		try {
-			$sql = 'UPDATE tblmovieshow WHERE movie_id=?';
+			$sql = 'UPDATE tblmovie WHERE id=?';
 			$statement = $this->connection->prepare($sql);
 			$statement->execute([
 				$this->getMovieId()
